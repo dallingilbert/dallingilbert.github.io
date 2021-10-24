@@ -19,6 +19,10 @@ const links = [
     label: "Week5 Notes",
     url: "week05/index.html",
   },
+  {
+    label: "Week6 Notes",
+    url: "week06/index.html",
+  }
 ];
 
 // get pointer to <ul> element
