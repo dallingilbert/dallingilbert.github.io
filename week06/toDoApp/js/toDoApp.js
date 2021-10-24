@@ -19,12 +19,14 @@ class ToDoModel {
 
     this.toDoArr.push(toDoItem);
     this.onToDoListChanged(this.toDoArr);
+    this._commit(this.toDoArr);
   };
 
   deleteItem(id) {
     this.toDoArr = this.toDoArr.filter((toDoItem) => toDoItem.id !== id);
 
     this.onToDoListChanged(this.toDoArr);
+    this._commit(this.toDoArr);
   }
 
   markComplete(id) {
@@ -34,10 +36,16 @@ class ToDoModel {
         : toDoItem
     );
     this.onToDoListChanged(this.toDoArr);
+    this._commit(this.toDoArr);
   }
 
   bindToDoListChanged(callback) {
     this.onToDoListChanged = callback;
+  }
+
+  _commit(toDoArr) {
+      this.onToDoListChanged(toDoArr);
+      localStorage.setItem('toDoArr', JSON.stringify(toDoArr));
   }
 }
 
@@ -59,7 +67,7 @@ class ToDoView {
     this.input.name = "todo";
 
     this.submitButton = this.createElement("button");
-    this.submitButton.textContent = "Submit";
+    this.submitButton.textContent = "Add Item";
 
     // The visual representation of the todo list
     this.todoList = this.createElement("ul", "todo-list");
@@ -131,7 +139,7 @@ class ToDoView {
 
         // The todos will also have a delete button
         const deleteButton = this.createElement("button", "delete");
-        deleteButton.textContent = "Delete";
+        deleteButton.textContent = "x";
         li.append(checkbox, span, deleteButton);
 
         // Append nodes to the todo list

@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 19px;
+    color: white;
+    background-color: cadetblue;
+    padding: 15px;
+}
+
+form input {
+    padding: 10px;
+    margin: 0px;
+    width: 98%;
+    border-style: none;
+    font-size: 1em;
+    background-color: darkgray;
+}
+
+form button {
+    font-size: 1.2em;
+    height: 30px;
+    border-style: none;
+    width: 98%;
+    letter-spacing: 3px;
+}
+
+button {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 22px;
+    width: 22px;
+    background-color: cadetblue;
+    border-color: cadetblue;
+    padding: 0px;
+    color:white;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: darkcyan;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px 20px 0px 20px;
+}
+
+ul li {
+    border: 1px solid gray;
+    background-color: lightgray;
+    color: black;
+}
+
+ul li:nth-child(even) {
+    background-color: darkgray;
+    color: white;
+}
+
+li {
+    text-align: left;
+    width: 100%;
+    font-size: 2.0em;
+    padding: 2px 0px 2px 0px;
+    letter-spacing: 1px;
+    border: 1px;
+}
+
+li button {
+    width: 22px;
+    border-style: none;
+}
+
+span {
+    padding: 10px;
+}
+
+
+#toDoList {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 30px 20px 30px 20px;
+    text-align: center;
+    color: white;
+}
+
+.todo-list li {
+    list-style-type: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: 1em;
+}
