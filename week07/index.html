@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 07 WDD330</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+  </head>
+
+  <body>
+    <nav>
+      <ul></ul>
+    </nav>
+
+    <div class="notes">
+      <h1>Notes</h1>
+
+      <h2>Further Functions</h2>
+      <h3>Call & Apply Methods</h3>
+      <ul>
+        <li>
+          The call method can be used to set the value of this inside a function
+          to an object that is provided as the first argument
+        </li>
+
+        <li>
+          The apply method works in the same way, except the arguments of the
+          function are provided as an array
+        </li>
+
+        <li>
+          The main purpose of these functions is they allow generalized
+          functions to be written that are not tied to specific objects by being
+          methods of that object. This gives flexibility over how the functions
+          can be used.
+        </li>
+      </ul>
+
+      <h3>Memoization</h3>
+      <ul>
+        <li>
+          If we have a function that takes a lot of computational power, we can
+          store the result in a cache and access it through .cache member
+          function
+        </li>
+      </ul>
+
+      <h3>Recursive functions</h3>
+      <ul>
+        <li>
+          A recursive function is one that invokes itself until a certain
+          condition is met. It’s a useful tool to use when iterative processes
+          are involved
+        </li>
+      </ul>
+
+      <h3>Promises</h3>
+      <ul>
+        <li>
+          A promise represents the future result of an asynchronous operation.
+          Promises don't do anything that can't already be achieved using
+          callbacks, but they help simplify the process, and avoid the
+          convoluted code that can result from using multiple callbacks.
+        </li>
+
+        <li>
+          Promises go through a life cycle, which either ends in being resolved
+          or rejected
+        </li>
+
+        <li>
+          Once a promise has been settled, it moves on to the then() method to
+          deal with the outcome. Any data returned from the resolve or reject
+          fuction will be passed here.
+        </li>
+      </ul>
+
+      <h2>AJAX</h2>
+
+      <h3>Basic Usage</h3>
+      <ul>
+        <li>
+          The Fetch API provides a global fetch() method that only has one
+          mandatory argument, which is the URL of the resource you wish to
+          fetch.
+        </li>
+      </ul>
+
+      <h3>Response Interface</h3>
+      <ul>
+        <li>
+          Deals with the object that’s returned when the promise is fulfilled.
+          Response objects have a number of properties and methods that allow us
+          to process the response effectively.
+        </li>
+
+        <li>
+          ok - this property checks to see if the response is successful, it
+          does so by checking the HTTP status code
+        </li>
+
+        <li>
+          headers - A Headers object containing any headers associated with the
+          response
+        </li>
+
+        <li>url - a string containing the url of the response</li>
+
+        <li>
+          redirected - a boolean value that specifies if the response is the
+          result of a redirect
+        </li>
+      </ul>
+    </div>
+
+    <div class="examples">
+      <h1>See links or console for examples</h1>
+      <ul>
+        <a href="./ta07/html/hiking-complete.html">Team Activity 7</a>
+      </ul>
+    </div>
+    <script src="../js/index.js"></script>
+    <script src="./week7.js"></script>
+  </body>
+</html>
