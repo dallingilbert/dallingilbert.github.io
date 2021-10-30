@@ -22,6 +22,10 @@ const links = [
   {
     label: "Week6 Notes",
     url: "week06/index.html",
+  },
+  {
+    label: "Week7 Notes",
+    url: "week07/index.html",
   }
 ];
 
@@ -30,11 +34,34 @@ let ul = document.querySelector("ul");
 
 links.forEach((link) => {
   ul.innerHTML += `
-            <li>
-                <a href="${link.url}">${link.label}</a>
+            <li id="week-link">
+                <a href="${link.url}" id="weeks">${link.label}</a>
             </li>
         `;
 });
 
-// prevent directory from looking for wierd paths
 
+// let weekLinks = document.querySelectorAll('weeks');
+
+// function getURL() {
+//   let href = window.location.pathname;
+//   let weekPath = href.split('/');
+//   return weekPath[3];
+// }
+
+// // prevent directory from looking for weird paths
+// function directURL(previousPath) {
+//   let path = getURL();
+//   if (previousPath !== path) {
+//     return true;
+//   }
+  
+// }
+
+// function addEventListenerList(list, event, fn) {
+//   for (let i = 0; i < list.length; i++) {
+//     list[i].addEventListener(event, fn, false);
+//   }
+// }
+
+// addEventListenerList(weekLinks, 'click', directURL(weekLinks));
