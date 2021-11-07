@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 08 WDD330</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+  </head>
+
+  <body>
+    <nav>
+      <ul></ul>
+    </nav>
+
+    <div class="notes">
+      <h1>Notes</h1>
+      <h3>CSS Transforms</h3>
+      <ul>
+        <li>
+          The transform property lets you translate, rotate, scale and/or skew
+          any element on the page.
+        </li>
+        <li>
+          The value of the transform property is one or more transform functions
+          that will be applied in the order they are provided.
+        </li>
+      </ul>
+
+      <h3>CSS Translations</h3>
+      <ul>
+        <li>
+          Translation functions allow you to move elements left, right, up or
+          down. When we translate elements, we are moving elements without
+          impacting the flow of the document
+        </li>
+
+        <li>
+          Example: transform: translate(45px, 45px) (moves the element x pixels
+          from left, and y pixels from the top)
+        </li>
+
+        <li>
+          Transforms do not work on inline elements. We need the add the display
+          attribute to our CSS with inline-block.
+        </li>
+      </ul>
+
+      <h3>Scaling</h3>
+      <ul>
+        <li>
+          The scale function scales an element by the defined factors
+          horizontally then vertically.
+        </li>
+
+        <li>
+          Sometimes scaling may provide unwanted results, instead of using
+          scaling to properly fit our text, try modifying the element's height,
+          width or font-size instead.
+        </li>
+      </ul>
+
+      <h3>Rotation</h3>
+      <ul>
+        <li>
+          The rotate function rotates an element around a point of origin by a
+          specified angle value.
+        </li>
+      </ul>
+
+      <h3>Transitions</h3>
+      <ul>
+        <li>
+          Transitions allow us to create a smoothing affect on different
+          animations. Such as having a links color slowly fade to the original
+          after a user hovers over it.
+        </li>
+        <li>
+          It is important to start with a default transition-property. Any
+          property that has a midpoint such as color or width, is able to
+          perform a transition. When we transition we must define a pre-state
+          and a post-state.
+        </li>
+      </ul>
+    </div>
+
+    <div class="examples">
+      <h1>See links or console for examples</h1>
+      <ul>
+        <li>
+          <a href="./examples/example.html">Playing with Animations</a>
+        </li>
+        <li>
+          <a href="./ta07/html/hiking-complete.html">Team Activity 8</a>
+        </li>
+      </ul>
+    </div>
+    <script src="../js/index.js"></script>
+    <script src="./week8.js"></script>
+  </body>
+</html>
