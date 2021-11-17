@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 10 WDD330</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+
+  <body>
+    <nav>
+      <ul></ul>
+    </nav>
+
+    <div class="notes">
+      <h1>Notes</h1>
+      <h3>Validating Forms</h3>
+      <ul>
+        <li>
+          We use client-side form validation to verify that all required form
+          controls are filled out and in the correct format.
+        </li>
+        <li>
+          It is often an important feature of good user experience, by catching
+          invalid data on the client-side. If it gets to the server and it is
+          rejected there is a noticable delay due to the client and server
+          communication.
+        </li>
+        <li>
+          Client-side validation should not be considered an exhaustive security
+          measure. Both the server, and the client should perform security
+          checks.
+        </li>
+      </ul>
+
+      <h3>Why do we validate forms?</h3>
+      <ul>
+        <li>We want to get the right data, in the right format.</li>
+        <li>We want to protect our user's data.</li>
+        <li>We want to protect ourselves.</li>
+      </ul>
+
+      <h3>Different types of client-side validation</h3>
+      <ol>
+        <li>Built-in form validation</li>
+        <li>JavaScript</li>
+      </ol>
+
+      <h3>Using built-in form validation</h3>
+      <ul>
+        <li class="no-bullet">
+          We can validate most user data without relying on JavaScript. There
+          are a list of validation attributes:
+        </li>
+        <li>
+          required (specifies whether a form field needs to be filled in before
+          a form can be submitted)
+        </li>
+        <li>
+          minlength and maxlength (specifies the minimum and maximum length of
+          textual data)
+        </li>
+        <li>
+          min and max (specifies the minimum and maximum values of numerical
+          data)
+        </li>
+        <li>
+            type (specifies the data type required)
+        </li>
+        <li>
+            pattern (regular expressions)
+        </li>
+      </ul>
+    </div>
+
+    <div class="examples">
+      <h1>Examples</h1>
+      <h3>Built in Number Validation</h3>
+      <form>
+          <label for="Enter a movie">Movie</label>
+          <input type="text" id="movie">
+          <button>Submit</button>
+      </form>
+      <ul>
+        <!-- <li>
+          <a href="./examples/example.html">Playing with Animations</a>
+        </li>
+        <li>
+          <a href="./ta08/html/ta08.html">Team Activity 8</a>
+        </li> -->
+      </ul>
+    </div>
+    <script src="../js/index.js"></script>
+    <script src="./week10.js"></script>
+  </body>
+</html>
