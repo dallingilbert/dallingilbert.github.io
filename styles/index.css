@@ -6,6 +6,7 @@ body {
     color: wheat;
 }
 
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -29,6 +30,10 @@ header {
     content: '';
     display: table;
     clear: both;
+}
+
+ul .no-bullet {
+    list-style-type: none;
 }
 
 h3 {
