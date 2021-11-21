@@ -51,8 +51,10 @@
       <h3>Using built-in form validation</h3>
       <ul>
         <li class="no-bullet">
-          We can validate most user data without relying on JavaScript. There
-          are a list of validation attributes:
+          <span>
+            We can validate most user data without relying on JavaScript. There
+            are a list of validation attributes:
+          </span>
         </li>
         <li>
           required (specifies whether a form field needs to be filled in before
@@ -72,15 +74,34 @@
         <li>
             pattern (regular expressions)
         </li>
+        <li>
+          Depending on rules we set, the input from our form can either set a CSS psuedo-class
+          to :valid or :invalid. Here we can use CSS to change the display of our page and 
+          inform users of what is valid or invalid input.
+        </li>
       </ul>
     </div>
 
     <div class="examples">
       <h1>Examples</h1>
-      <h3>Built in Number Validation</h3>
+      <h3>Built in Validation</h3>
       <form>
           <label for="Enter a movie">Movie</label>
-          <input type="text" id="movie">
+          <input type="text" id="movie" required>
+          <button>Submit</button>
+      </form>
+      
+      <h3>Validation with JavaScript</h3>
+      <form id="pInfo" novalidate>
+          <label for="first name">First Name</label>
+          <span class="errorFirst" aria-live="polite"></span>
+          <input type="text" id="fname" name="fname" required>
+          <label for="last name">Last Name</label>
+          <span class="errorLast" aria-live="polite"></span>
+          <input type="text" id="lname" name="lname" required>
+          <label for="email">Email</label>
+          <span class="error" aria-live="polite"></span>
+          <input type="email" id="mail" name="mail" required>
           <button>Submit</button>
       </form>
       <ul>
@@ -93,6 +114,6 @@
       </ul>
     </div>
     <script src="../js/index.js"></script>
-    <script src="./week10.js"></script>
+    <script src="./js/week10.js"></script>
   </body>
 </html>
