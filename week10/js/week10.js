@@ -40,7 +40,7 @@ lname.addEventListener("input", function (e) {
 
 form.addEventListener('submit', function (event) {
     // submit form if field is valid
-    if (!email.validity.valid || !fname.validity.valid || !lname.validity.valid) {
+    if (!email.validity.valid || !fname.validity.valueMissing || !lname.validity.valueMissing) {
         // display error message if it is not correct format
         showErr();
 
