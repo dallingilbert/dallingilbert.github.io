@@ -1,42 +1,42 @@
 const links = [
   {
-    label: "Week1 Notes",
+    label: "Week1",
     url: "week01/index.html",
   },
   {
-    label: "Week2 Notes",
+    label: "Week2",
     url: "week02/index.html",
   },
   {
-    label: "Week3 Notes",
+    label: "Week3",
     url: "week03/index.html",
   },
   {
-    label: "Week4 Notes",
+    label: "Week4",
     url: "week04/index.html",
   },
   {
-    label: "Week5 Notes",
+    label: "Week5",
     url: "week05/index.html",
   },
   {
-    label: "Week6 Notes",
+    label: "Week6",
     url: "week06/index.html",
   },
   {
-    label: "Week7 Notes",
+    label: "Week7",
     url: "week07/index.html",
   },
   {
-    label: "Week8 Notes",
+    label: "Week8",
     url: "week08/index.html",
   },
   {
-    label: "Week9 Notes",
+    label: "Week9",
     url: "week09/index.html",
   },
   {
-    label: "Week10 Notes",
+    label: "Week10",
     url: "week10/index.html",
   }
 ];
