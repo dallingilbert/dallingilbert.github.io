@@ -38,20 +38,61 @@ const links = [
   {
     label: "Week10",
     url: "week10/index.html",
-  }
+  },
+];
+
+// our list for navigation links
+const nav = [
+  {
+    label: 'Home',
+    link: '/dallingithubpages/dallingilbert.github.io/index.html'
+  },
+  {
+    label: 'About Me',
+    link: '#about'
+  },
+  {
+    label: 'Notes',
+    link: ''
+  },
+  {
+    label: 'About Me',
+    link: '#about'
+  },
+  
 ];
 
 // get pointer to <ul> element
 let ul = document.querySelector("ul");
+const div = document.querySelector(".dropdown-content");
+const containerDiv = document.querySelector(".container");
+
+console.log(div);
+console.log(containerDiv);
 
 links.forEach((link) => {
-  ul.innerHTML += `
-            <li id="week-link">
+  div.innerHTML += `
                 <a href="${link.url}" id="weeks">${link.label}</a>
-            </li>
+      
         `;
 });
 
+const img = document.createElement("img");
+img.src = './img/logo.png';
+img.className = 'logo';
+containerDiv.appendChild(img);
+
+ul.innerHTML += `
+        <li>
+          <a id="menu-item" href="/dallingithubpages/dallingilbert.github.io/index.html">Home</a>
+        </li>
+        <li>
+          <a id="menu-item" href="#about">About Me</a>
+        </li>
+        <li>
+        <a id="menu-item" href="#projects">Projects</a>
+        </li>
+`;
 
 // let weekLinks = document.querySelectorAll('weeks');
 
@@ -67,7 +108,7 @@ links.forEach((link) => {
 //   if (previousPath !== path) {
 //     return true;
 //   }
-  
+
 // }
 
 // function addEventListenerList(list, event, fn) {

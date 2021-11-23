@@ -1,92 +1,147 @@
 body {
-    margin: auto;
-    padding: 0px;
-    background: #222;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    color: wheat;
+  margin: 0;
+  background: #222;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  color: wheat;
 }
-
 
 .container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.logo {
-    float: left;
-    height: 150px;
-    width: 200px;
-}
-
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    float: left;
-    background-color: #004aad;
-    text-align: center;
-    width: 10%;
-}
-
-nav li:hover {
-    background-color: #222;
-}
-
-.active {
-    background-color: #222;
-}
-
-nav li a {
-    display: block;
-    padding: 15px;
-    color: white;
-}
-
-div {
-    clear: left;
+  width: 80%;
+  margin: 0 auto;
 }
 
 header {
-    background: #004aad;
+  background: #004aad;
 }
 
-.header::after {
-    content: '';
-    display: table;
-    clear: both;
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+  height: 50px;
+  width: 50px;
+}
+
+/* Nav container and styling */
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Styling for each list item in our nav */
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+  position: relative;
+}
+
+/* Our link styling */
+nav a {
+  color: #222;
+  text-transform: uppercase;
+}
+
+nav a:hover,
+nav button:hover {
+  color: #000;
+}
+
+/* Our line animation over each link */
+nav button::before,
+a::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: #222;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav button:hover::before,
+a#menu-item:hover::before {
+  width: 100%;
+}
+
+/* Dropdown btn */
+.dropdown .dropbtn {
+  font-size: 16px;
+  color: #222;
+  border: none;
+  outline: none;
+  font-family: "Work Sans", sans-serif;
+  background-color: inherit;
+  text-transform: uppercase;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #004aad;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Our links in the dropdown */
+.dropdown-content a {
+  float: none;
+  color: #222;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 ul .no-bullet {
-    list-style-type: none;
+  list-style-type: none;
 }
-
 
 h1 {
-    text-align: center;
-    background-color: black;
-    width: 100%;
-    color: grey;
+  text-align: center;
+  background-color: black;
+  width: 100%;
+  color: grey;
 }
 
-h1, h3 {
-    padding: 5px;
+h1,
+h3 {
+  padding: 5px;
 }
 
 h3 {
-    margin: 25px;
+  margin: 25px;
 }
 
-
 a {
-    display: block;
-    text-decoration: none;
+  display: block;
+  text-decoration: none;
 }
 
 span {
-    font-weight: bold;
+  font-weight: bold;
 }

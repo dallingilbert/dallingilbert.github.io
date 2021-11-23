@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Week 10 WDD330</title>
     <link rel="stylesheet" href="../styles/index.css" />
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
 
   <body>
-    <nav>
-      <ul></ul>
-    </nav>
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li class="dropdown">
+              <button class="dropbtn">Notes</button>
+              <div class="dropdown-content"></div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     <div class="notes">
       <h1>Notes</h1>
@@ -68,17 +77,21 @@
           min and max (specifies the minimum and maximum values of numerical
           data)
         </li>
+        <li>type (specifies the data type required)</li>
+        <li>pattern (regular expressions)</li>
         <li>
-            type (specifies the data type required)
+          Depending on rules we set, the input from our form can either set a
+          CSS psuedo-class to :valid or :invalid. Here we can use CSS to change
+          the display of our page and inform users of what is valid or invalid
+          input.
         </li>
-        <li>
-            pattern (regular expressions)
-        </li>
-        <li>
-          Depending on rules we set, the input from our form can either set a CSS psuedo-class
-          to :valid or :invalid. Here we can use CSS to change the display of our page and 
-          inform users of what is valid or invalid input.
-        </li>
+      </ul>
+
+      <h3>Using Fetch</h3>
+      <ul>
+        <li>The Promise returned from fetch will not reject on HTTP error status</li>
+        <li>It is important that we check response status to diagnose errors</li>
+        <li>Fetch() will not send cross-origin cookies unless we set the credentials init option</li>
       </ul>
     </div>
 
@@ -86,23 +99,23 @@
       <h1>Examples</h1>
       <h3>Built in Validation</h3>
       <form>
-          <label for="Enter a movie">Movie</label>
-          <input type="text" id="movie" required>
-          <button>Submit</button>
+        <label for="Enter a movie">Movie</label>
+        <input type="text" id="movie" required />
+        <button>Submit</button>
       </form>
-      
+
       <h3>Validation with JavaScript</h3>
       <form id="pInfo" novalidate>
-          <label for="first name">First Name</label>
-          <span class="errorFirst" aria-live="polite"></span>
-          <input type="text" id="fname" name="fname" required>
-          <label for="last name">Last Name</label>
-          <span class="errorLast" aria-live="polite"></span>
-          <input type="text" id="lname" name="lname" required>
-          <label for="email">Email</label>
-          <span class="error" aria-live="polite"></span>
-          <input type="email" id="mail" name="mail" required>
-          <button>Submit</button>
+        <label for="first name">First Name</label>
+        <span class="errorFirst" aria-live="polite"></span>
+        <input type="text" id="fname" name="fname" required />
+        <label for="last name">Last Name</label>
+        <span class="errorLast" aria-live="polite"></span>
+        <input type="text" id="lname" name="lname" required />
+        <label for="email">Email</label>
+        <span class="error" aria-live="polite"></span>
+        <input type="email" id="mail" name="mail" required />
+        <button>Submit</button>
       </form>
       <ul>
         <!-- <li>
