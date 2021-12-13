@@ -85,7 +85,7 @@ function buildNav() {
   // fill in our unordered list
   ul.innerHTML += `
         <li>
-          <a id="menu-item" href="/dallingithubpages/dallingilbert.github.io/index.html">Home</a>
+          <a id="menu-item" href="https://dallingithubpages/dallingilbert.github.io/index.html">Home</a>
         </li>
         <li>
           <a id="menu-item" href="#about">About Me</a>
@@ -97,7 +97,7 @@ function buildNav() {
 
   // add our image to the navigation
   const img = document.createElement("img");
-  img.src = "/dallingithubpages/dallingilbert.github.io/img/logo.png";
+  img.src = "./dallingithubpages/dallingilbert.github.io/img/logo.png";
   img.className = "logo";
   containerDiv.appendChild(img);
 }
