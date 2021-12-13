@@ -42,18 +42,14 @@ const links = [
 ];
 
 // our list for navigation links
-const nav = [
+const navs = [
   {
     label: "Home",
-    link: "/dallingithubpages/dallingilbert.github.io/index.html",
+    link: "https://dallingilbert.github.io",
   },
   {
     label: "About Me",
     link: "#about",
-  },
-  {
-    label: "Notes",
-    link: "",
   },
   {
     label: "About Me",
@@ -82,18 +78,15 @@ function buildNav() {
   });
   console.log(div);
 
-  // fill in our unordered list
-  ul.innerHTML += `
-        <li>
-          <a id="menu-item" href="https://dallingithubpages/dallingilbert.github.io/index.html">Home</a>
-        </li>
-        <li>
-          <a id="menu-item" href="#about">About Me</a>
-        </li>
-        <li>
-        <a id="menu-item" href="#projects">Projects</a>
-        </li>
-`;
+
+  // build our nav links
+  navs.forEach((nav) => {
+    ul.innerHTML += `
+      <li>
+      <a id="menu-item" href="${nav.link}">${nav.label}</a>
+      </li>
+   `;
+  });
 
   // add our image to the navigation
   const img = document.createElement("img");
@@ -103,29 +96,3 @@ function buildNav() {
 }
 
 window.addEventListener("load", buildNav);
-
-function getURL() {
-  let href = window.location.pathname;
-  let weekPath = href.split("/");
-  return weekPath[3];
-}
-
-// prevent directory from looking for weird paths
-function directURL() {
-  let re = /week\d\d/;
-  let path = getURL();
-   
-
-  // check if we get a path in the format of 'week##'
-  if (re.test(path)) {
-    hasNavigated = true;
-  } else
-    hasNavigated = false;
-
-  // if we 
-  if (!hasNavigated) {
-
-  }
-}
-
-
