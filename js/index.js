@@ -44,22 +44,21 @@ const links = [
 // our list for navigation links
 const nav = [
   {
-    label: 'Home',
-    link: '/dallingithubpages/dallingilbert.github.io/index.html'
+    label: "Home",
+    link: "/dallingithubpages/dallingilbert.github.io/index.html",
   },
   {
-    label: 'About Me',
-    link: '#about'
+    label: "About Me",
+    link: "#about",
   },
   {
-    label: 'Notes',
-    link: ''
+    label: "Notes",
+    link: "",
   },
   {
-    label: 'About Me',
-    link: '#about'
+    label: "About Me",
+    link: "#about",
   },
-  
 ];
 
 // get pointer to <ul> element
@@ -67,22 +66,24 @@ let ul = document.querySelector("ul");
 const div = document.querySelector(".dropdown-content");
 const containerDiv = document.querySelector(".container");
 
+// hasNavigated
+let hasNavigated = false;
+
 console.log(div);
 console.log(containerDiv);
 
-links.forEach((link) => {
-  div.innerHTML += `
-                <a href="${link.url}" id="weeks">${link.label}</a>
-      
-        `;
-});
+function buildNav() {
+  // fill in our dropdown menu
+  links.forEach((link) => {
+    div.innerHTML += `
+                  <a href="https://dallingilbert.github.io/${link.url}" id="weeks">${link.label}</a>
+        
+          `;
+  });
+  console.log(div);
 
-const img = document.createElement("img");
-img.src = './img/logo.png';
-img.className = 'logo';
-containerDiv.appendChild(img);
-
-ul.innerHTML += `
+  // fill in our unordered list
+  ul.innerHTML += `
         <li>
           <a id="menu-item" href="/dallingithubpages/dallingilbert.github.io/index.html">Home</a>
         </li>
@@ -94,27 +95,37 @@ ul.innerHTML += `
         </li>
 `;
 
-// let weekLinks = document.querySelectorAll('weeks');
+  // add our image to the navigation
+  const img = document.createElement("img");
+  img.src = "/dallingithubpages/dallingilbert.github.io/img/logo.png";
+  img.className = "logo";
+  containerDiv.appendChild(img);
+}
 
-// function getURL() {
-//   let href = window.location.pathname;
-//   let weekPath = href.split('/');
-//   return weekPath[3];
-// }
+window.addEventListener("load", buildNav);
 
-// // prevent directory from looking for weird paths
-// function directURL(previousPath) {
-//   let path = getURL();
-//   if (previousPath !== path) {
-//     return true;
-//   }
+function getURL() {
+  let href = window.location.pathname;
+  let weekPath = href.split("/");
+  return weekPath[3];
+}
 
-// }
+// prevent directory from looking for weird paths
+function directURL() {
+  let re = /week\d\d/;
+  let path = getURL();
+   
 
-// function addEventListenerList(list, event, fn) {
-//   for (let i = 0; i < list.length; i++) {
-//     list[i].addEventListener(event, fn, false);
-//   }
-// }
+  // check if we get a path in the format of 'week##'
+  if (re.test(path)) {
+    hasNavigated = true;
+  } else
+    hasNavigated = false;
 
-// addEventListenerList(weekLinks, 'click', directURL(weekLinks));
+  // if we 
+  if (!hasNavigated) {
+
+  }
+}
+
+
