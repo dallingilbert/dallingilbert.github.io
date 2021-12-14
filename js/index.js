@@ -52,8 +52,8 @@ const navs = [
     link: "#about",
   },
   {
-    label: "About Me",
-    link: "#about",
+    label: "Projects",
+    link: "#projects",
   },
 ];
 
