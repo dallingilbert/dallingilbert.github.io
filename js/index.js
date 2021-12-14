@@ -90,7 +90,7 @@ function buildNav() {
 
   // add our image to the navigation
   const img = document.createElement("img");
-  img.src = "https://dallingilbert.github.io/img/logo.png";
+  img.src = "https://dallingilbert.github.io/img/logo2.png";
   img.className = "logo";
   containerDiv.appendChild(img);
 }
